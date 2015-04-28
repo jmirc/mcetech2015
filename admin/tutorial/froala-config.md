@@ -64,3 +64,26 @@ by
 ## Create a new hotel
 
 http://www.expedia.ca/Montreal-Hotels-Ritz-Carlton.h8767.Hotel-Information
+
+name: Ritz-Carlton
+address: 1228 Sherbrooke Street West 
+city: Montreal 
+postalCode: H3G 1H6 
+province: Quebec
+country: Canada
+description:
+
+    <h3>Luxury Montreal hotel in Downtown Montreal, near Notre Dame Basilica</h3>
+    <article data-type="read-more"><section>
+    <h4>Location</h4>
+    
+    <p>Located in Downtown Montreal, this luxury hotel is within a 15-minute walk of Reid Wilson House, Bell Centre, and Christ Church Cathedral. Percival Molson Memorial Stadium and Mount Royal Park are also within 1 mi (2 km).</p>
+    
+    <h4>Hotel Features</h4>
+    
+    <p>This smoke-free hotel features a restaurant, an indoor pool, and a 24-hour fitness center. WiFi in public areas is free. Additionally, a bar/lounge, a rooftop terrace, and a 24-hour business center are onsite.</p>
+    
+    <h4>Room Amenities</h4>
+    
+    <p>All 129 rooms boast deep soaking tubs and offer free WiFi and 24-hour room service. Guests will also find LCD TVs, minibars, and premium bedding.</p>
+    </section></article>
