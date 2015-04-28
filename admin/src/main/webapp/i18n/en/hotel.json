@@ -1,0 +1,25 @@
+{
+    "adminApp": {
+        "hotel" : {
+            "home": {
+                "title": "Hotels",
+                "createLabel": "Create a new Hotel",
+                "createOrEditLabel": "Create or edit a Hotel"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Hotel {{ id }}?"
+            },
+            "detail": {
+                "title": "Hotel"
+            },
+            "name": "Name",
+            "description": "Description",
+            "address": "Address",
+            "city": "City",
+            "postalCode": "PostalCode",
+            "province": "Province",
+            "country": "Country",
+            "room": "room"
+        }
+    }
+}

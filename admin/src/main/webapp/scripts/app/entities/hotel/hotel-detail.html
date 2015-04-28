@@ -1,0 +1,78 @@
+
+<div>
+    <h2><span translate="adminApp.hotel.detail.title">Hotel</span> {{hotel.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="adminApp.hotel.name">Name</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{hotel.name}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="adminApp.hotel.description">Description</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{hotel.description}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="adminApp.hotel.address">Address</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{hotel.address}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="adminApp.hotel.city">City</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{hotel.city}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="adminApp.hotel.postalCode">PostalCode</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{hotel.postalCode}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="adminApp.hotel.province">Province</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{hotel.province}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="adminApp.hotel.country">Country</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{hotel.country}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="hotel"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

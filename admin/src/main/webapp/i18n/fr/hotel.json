@@ -1,0 +1,26 @@
+{
+    "adminApp": {
+        "hotel" : {
+            "home": {
+                "title": "Hotels",
+                "createLabel": "Créer un nouveau Hotel",
+                "createOrEditLabel": "Créer ou éditer un Hotel"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Hotel {{ id }} ?"
+            },
+            "detail": {
+                "title": "Hotel"
+            },
+            "name": "Name",
+            "description": "Description",
+            "address": "Address",
+            "city": "City",
+            "postalCode": "PostalCode",
+            "province": "Province",
+            "country": "Country",
+            "room": "room"
+        }
+    }
+}
+

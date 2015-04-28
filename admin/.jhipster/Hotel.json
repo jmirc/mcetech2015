@@ -1,0 +1,91 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "room",
+            "relationshipNameCapitalized": "Room",
+            "relationshipFieldName": "room",
+            "otherEntityName": "room",
+            "relationshipType": "one-to-many",
+            "otherEntityNameCapitalized": "Room"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Name",
+            "fieldNameUnderscored": "name",
+            "fieldInJavaBeanMethod": "Name",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "description",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Description",
+            "fieldNameUnderscored": "description",
+            "fieldInJavaBeanMethod": "Description",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "address",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Address",
+            "fieldNameUnderscored": "address",
+            "fieldInJavaBeanMethod": "Address",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "city",
+            "fieldType": "String",
+            "fieldNameCapitalized": "City",
+            "fieldNameUnderscored": "city",
+            "fieldInJavaBeanMethod": "City",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "postalCode",
+            "fieldType": "String",
+            "fieldNameCapitalized": "PostalCode",
+            "fieldNameUnderscored": "postal_code",
+            "fieldInJavaBeanMethod": "PostalCode",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 6,
+            "fieldName": "province",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Province",
+            "fieldNameUnderscored": "province",
+            "fieldInJavaBeanMethod": "Province",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 7,
+            "fieldName": "country",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Country",
+            "fieldNameUnderscored": "country",
+            "fieldInJavaBeanMethod": "Country",
+            "fieldValidate": false
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": true,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": false,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "fieldsContainDate": false,
+    "changelogDate": "20150428161026",
+    "pagination": "no",
+    "validation": true
+}
