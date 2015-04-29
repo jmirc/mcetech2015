@@ -1,0 +1,26 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: admin-service
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        serviceId: configuration-service
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/
+  instance:
+    leaseRenewalIntervalInSeconds: 5
+    metadataMap:
+      instanceId: ${vcap.application.instance_id:${spring.application.name}:${spring.application.instance_id:${server.port}}}
+
+# Info displayed by spring boot when calling /info
+info:
+  name: Admin Service
+  description: Hotel Management - Admin Service
+  version: ${project.version}
