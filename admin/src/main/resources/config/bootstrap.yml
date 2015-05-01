@@ -24,3 +24,8 @@ info:
   name: Admin Service
   description: Hotel Management - Admin Service
   version: ${project.version}
+
+
+turbine:
+    appConfig: ADMIN-SERVICE,PRICE-SERVICE
+    clusterNameExpression: new String("default")

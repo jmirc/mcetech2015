@@ -12,6 +12,7 @@ import com.codahale.metrics.annotation.Timed;
 import com.mycompany.myapp.domain.Room;
 import com.mycompany.myapp.repository.RoomRepository;
 import com.mycompany.myapp.service.PriceService;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
