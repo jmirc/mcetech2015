@@ -21,6 +21,7 @@
     </prerequisites>
 
     <properties>
+        <docker.image.prefix>mcetech</docker.image.prefix>
         <HikariCP.version>2.2.5</HikariCP.version>
         <assertj-core.version>1.0.0m1</assertj-core.version>
         <awaitility.version>1.4.0</awaitility.version>
@@ -403,6 +404,7 @@
         </dependency>
     </dependencies>
     <build>
+        <finalName>price-service</finalName>
         <resources>
             <resource>
                 <filtering>true</filtering>
@@ -610,6 +612,22 @@
                     <arguments>
                         <argument>--spring.profiles.active=dev</argument>
                     </arguments>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <version>0.2.6</version>
+                <configuration>
+                    <imageName>${docker.image.prefix}/${project.build.finalName}</imageName>
+                    <dockerDirectory>src/main/docker</dockerDirectory>
+                    <resources>
+                        <resource>
+                            <targetPath>/</targetPath>
+                            <directory>${project.build.directory}</directory>
+                            <include>${project.build.finalName}.war</include>
+                        </resource>
+                    </resources>
                 </configuration>
             </plugin>
         </plugins>

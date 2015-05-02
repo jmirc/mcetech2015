@@ -4,8 +4,9 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: ${EUREKA_URL:http://localdocker:8761/eureka/}
   instance:
+    hostname: ${CONFIGURATION_SERVICE_URL:localhost}
     leaseRenewalIntervalInSeconds: 5
 
 

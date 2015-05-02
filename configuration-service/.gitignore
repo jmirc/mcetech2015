@@ -106,3 +106,5 @@ Desktop.ini
 ######################
 !gradle/wrapper/gradle-wrapper.jar
 
+
+src/main/docker/livecoding-config

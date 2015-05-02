@@ -13,12 +13,12 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://127.0.0.1:8761/eureka/
+      defaultZone: ${EUREKA_URL:http://localdocker:8761/eureka/}
   instance:
-    hostname: localhost2
+    hostname: ${PRICE_SERVICE_URL:localhost}
     leaseRenewalIntervalInSeconds: 5
     metadataMap:
-      instanceId: ${vcap.application.instance_id:${spring.application.name}:${spring.application.instance_id:${server.port}}}
+      instanceId: ${HOSTNAME:${spring.application.name}:${spring.application.instance_id:${server.port}}}
 
 
 info:

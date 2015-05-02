@@ -1,0 +1,10 @@
+# Build the docker image
+mvn clean package -Pdocker docker:build
+
+# Run the docker image
+docker run -d -p 8888:8888 -v "{REPLACE_BY_FULL_PATH}/src/main/docker/livecoding-config:/livecoding-config" \
+-e "EUREKA_URL=http://192.168.59.103:8761/eureka/" -e "CONFIGURATION_SERVICE_URL=192.168.59.103" \
+-t mcetech/configuration-service --spring.profiles.active=docker
+
+
+

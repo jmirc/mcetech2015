@@ -1,0 +1,8 @@
+# Build the docker image
+mvn clean package docker:build
+
+# Run the docker image
+docker run -d -p 9090:9090 -e "PRICE_SERVICE_URL=192.168.59.103" -e "EUREKA_URL=http://192.168.59.103:8761/eureka/" -t mcetech/price-service
+
+# Start another one
+docker run -d -p 9091:9091 -e "PRICE_SERVICE_URL=192.168.59.103" -e "EUREKA_URL=http://192.168.59.103:8761/eureka/" -t mcetech/price-service --server.port=9091

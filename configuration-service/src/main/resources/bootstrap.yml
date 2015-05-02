@@ -5,7 +5,8 @@ spring:
     config:
       server:
         git:
-          uri: file://${HOME}/livecoding-config
+          uri: file://${LIVE_CODING_CONFIG}/livecoding-config
+          basedir: target/config
 
 info:
     name: Configuration Service
