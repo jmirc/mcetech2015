@@ -4,21 +4,38 @@ server:
 eureka:
   instance:
     hostname: localhost
+
   client:
     registerWithEureka: false
     fetchRegistry: false
+
+#---
+#spring:
+#  profiles: peerEnable
+#eureka:
+#  client:
+#    region: region1
+#    availabilityZones:
+#      region1: zone1,zone2
+#      region2: zone3
+#
 
 ---
 spring:
   profiles: peer1
 eureka:
+  enableSelfPreservation: false
   instance:
     hostname: localhost
   client:
+    availabilityZones:
+      us-east-1: us-east-1a,us-east-1b,us-east-1c
+    region: us-east-1
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      defaultZone: http://localhost2:8762/eureka/
+      us-east-1a: http://localhost:8761/eureka/, http://localhost2:8762/eureka/
+      us-east-1b: http://localhost3:8763/eureka/
 
 ---
 spring:
@@ -26,9 +43,38 @@ spring:
 server:
   port: 8762
 eureka:
+  enableSelfPreservation: false
   instance:
     hostname: localhost2
     nonSecurePort: ${server.port}
   client:
+    availabilityZones:
+      us-east-1: us-east-1a,us-east-1b,us-east-1c
+    region: us-east-1
+    registerWithEureka: true
+    fetchRegistry: true
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      us-east-1a: http://localhost:8761/eureka/, http://localhost2:8762/eureka/
+      us-east-1b: http://localhost3:8763/eureka/
+
+---
+spring:
+  profiles: peer3
+server:
+  port: 8763
+eureka:
+  enableSelfPreservation: false
+  instance:
+    hostname: localhost3
+    nonSecurePort: ${server.port}
+  client:
+    availabilityZones:
+      us-east-1: us-east-1a,us-east-1b,us-east-1c
+    region: us-east-1
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      us-east-1a: http://localhost:8761/eureka/, http://localhost2:8762/eureka/
+      us-east-1b: http://localhost3:8763/eureka/
+
+

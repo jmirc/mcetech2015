@@ -3,3 +3,4 @@ mvn clean package docker:build
 
 # Run the docker image
 docker run -d -p 8761:8761 -t mcetech/registry-service
+
